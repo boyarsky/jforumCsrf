@@ -218,7 +218,7 @@
 		return uri;
 	}
 	
-	/** inject tokens as query string parameters into url **/
+	/** inject tokens as query string parameters into url **/ 
 	function injectTokenAttribute(element, attributeName, tokenName, tokenValue, pageTokens) {
 		//var location = element.getAttribute(attributeName);
 		// hack - getting same error as on action - don't know why but hack to move forward
