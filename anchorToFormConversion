@@ -1,0 +1,116 @@
+Here's the list of URLs that needed changing from an anchor to a form since they really update something. 
+There were more in coderanch jforum - there are the ones I think came from pure jforum.
+It's also likely pure JForum has more that we had fixed prior to this analysis.
+
+<table border=0>
+    <TR>
+			<TD   >File</TD>
+			<TD  >Href</TD>
+			<TD  >Reason</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/user_profile.htm</TD>
+			<TD >#</TD>
+			<TD >Locks user</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/banner_track.htm</TD>
+			<TD >${contextPath}/adminBanner/delete/${banner.id}</TD>
+			<TD >deletes banner</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/topics_repository_info.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=topicsClear&amp;forum_id=${f.id}</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/forum_list.htm</TD>
+			<TD >${JForumContext.encodeUrl(/${jforumMainServletMapping}/forums/readAll</TD>
+			<TD >changes state</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/post_repository_info.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=postsClear&amp;topic_id=${t.get(</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/post_show_action_buttons_inc.htm</TD>
+			<TD >${JForumContext.encodeUrl(/jforum?module=${moduleName}&amp;amp;action=delete&amp;amp;post_id=${post.id}&amp;amp;start=${start}</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/search_stats_list.htm</TD>
+			<TD >${contextPath}/jforum?module=${moduleName}&amp;action=createIndexDirectory</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/banner_list.htm</TD>
+			<TD >${contextPath}/${moduleName}/delete/${banner.id}</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=bbReload</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=sessionClear</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=modulesReload</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=smiliesReload</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=rankingReload</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=topicsMoreInfo</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/cache_list.htm</TD>
+			<TD >${contextPath}/jforum?module=adminCache&amp;action=bannersReload</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/forum_show.htm</TD>
+			<TD >${JForumContext.encodeUrl(/${jforumMainServletMapping}/forums/readAll/${forum.id}</TD>
+			<TD >updates state</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/forum_show.htm</TD>
+			<TD >${JForumContext.encodeUrl(/forums/forums/watchForum/${forum.id}</TD>
+			<TD >Subscribes</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/admin/customer_list.htm</TD>
+			<TD >${contextPath}/${moduleName}/delete/${customer.id}</TD>
+			<TD >mod action</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/post_show_thread_buttons.htm</TD>
+			<TD >${JForumContext.encodeUrl(/forums/posts/watch/${start}/${topic.id}</TD>
+			<TD >changes state</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/pm_list.htm</TD>
+			<TD >${JForumContext.encodeUrl(/pm/send</TD>
+			<TD >sends mail</TD>
+		</TR>
+		<TR>
+			<TD  >templates/default/pm_list.htm</TD>
+			<TD >${JForumContext.encodeUrl(/pm/send</TD>
+			<TD >sends mail</TD>
+		</TR>
+</table>
